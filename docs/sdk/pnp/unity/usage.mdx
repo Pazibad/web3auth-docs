@@ -1,7 +1,7 @@
 ---
 title: Using of PnP Unity SDK
 sidebar_label: Usage
-displayed_sidebar: sdk
+displayed_sidebar: sdk_pnp_unity
 description: "Web3Auth PnP Unity SDK - Usage | Documentation - Web3Auth"
 ---
 
@@ -9,18 +9,21 @@ import TabItem from "@theme/TabItem";
 import Tabs from "@theme/Tabs";
 import UnityResponse from "@site/src/common/sdk/pnp/unity/_response.mdx";
 
-Once you've installed and successfully initialized Web3Auth, you can use it to authenticate your users.
+Once you've installed and successfully initialized Web3Auth, you can use it to authenticate your
+users.
 
 ## Logging in a User
 
 #### `web3Auth.login(LoginParams)`
 
-This function helps your users to trigger the login process. The login flow is triggered based on the selected provider. You can view the list of
-selected providers in the [provider](#provider) section.
+This function helps your users to trigger the login process. The login flow is triggered based on
+the selected provider. You can view the list of selected providers in the [provider](#provider)
+section.
 
 :::tip
 
-Additionally, you can associate a function to be triggered on successful login. This function receives the user's profile as a parameter.
+Additionally, you can associate a function to be triggered on successful login. This function
+receives the user's profile as a parameter.
 
 ```cs
 void Start()
@@ -136,8 +139,9 @@ public enum Provider
 
 ### `ExtraLoginOptions`
 
-The `LoginParams` class accepts the `ExtraLoginOptions` as an optional input, containing advanced options for custom authentication, email
-passwordless login, etc. This parameter can be considered as advanced login options needed for specific cases.
+The `LoginParams` class accepts the `ExtraLoginOptions` as an optional input, containing advanced
+options for custom authentication, email passwordless login, etc. This parameter can be considered
+as advanced login options needed for specific cases.
 
 ```cs
 LoginParams() { selectedLoginProvider, extraLoginOptions = ExtraLoginOptions() }
@@ -213,7 +217,8 @@ public class ExtraLoginOptions {
 
 ### `Curve`
 
-The `LoginParams` class accepts a `curve` parameter. This parameter can be used to select the elliptic curve to use for the signature.
+The `LoginParams` class accepts a `curve` parameter. This parameter can be used to select the
+elliptic curve to use for the signature.
 
 ```cs
 LoginParams() { selectedLoginProvider, curve = Curve.SECP256K1 }
@@ -393,8 +398,8 @@ public void login()
 
 ### `web3Auth.logout()`
 
-Trigger logout flow. This function doesn't take parameters. A completable future containing a void object will be returned on successfull logout
-otherwise an error response is returned.
+Trigger logout flow. This function doesn't take parameters. A completable future containing a void
+object will be returned on successfull logout otherwise an error response is returned.
 
 :::tip
 

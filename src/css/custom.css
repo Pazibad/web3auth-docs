@@ -96,9 +96,11 @@
   --ifm-font-color-base: var(--ifm-color-content);
   --ifm-font-color-base-inverse: var(--ifm-color-content-inverse);
   --ifm-font-color-secondary: var(--ifm-color-content-secondary);
-  --ifm-font-family-base: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --ifm-font-family-base: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --ifm-font-size-base: 16px;
   --ifm-font-weight-light: 300;
   --ifm-font-weight-normal: 400;
@@ -482,7 +484,8 @@ html[data-theme="dark"] .navbar-github-link:before {
 }
 
 .navbar-button {
-  background: linear-gradient(138.93deg, #0364ff 14.81%, #0016de 85.98%), linear-gradient(0deg, #0364ff, #0364ff);
+  background: linear-gradient(138.93deg, #0364ff 14.81%, #0016de 85.98%),
+    linear-gradient(0deg, #0364ff, #0364ff);
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -547,10 +550,12 @@ a:any-link:hover {
 }
 
 .navbar-sidebar__items {
-  padding: 0.5rem calc(var(--ifm-navbar-padding-horizontal) - var(--ifm-menu-link-padding-horizontal));
+  padding: 0.5rem
+    calc(var(--ifm-navbar-padding-horizontal) - var(--ifm-menu-link-padding-horizontal));
 }
 
-.navbar__link svg.iconExternalLink_node_modules-\@docusaurus-theme-classic-lib-next-theme-IconExternalLink-styles-module {
+.navbar__link
+  svg.iconExternalLink_node_modules-\@docusaurus-theme-classic-lib-next-theme-IconExternalLink-styles-module {
   height: 10px;
   width: 10px;
 }
@@ -599,7 +604,8 @@ a:any-link:hover {
   .dropdown > .navbar__link {
     padding: 0px 20px 12px 0px;
   }
-  .navbar__items .searchBox_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchBar-styles-module {
+  .navbar__items
+    .searchBox_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchBar-styles-module {
     padding: 0px 20px;
     /* padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal); */
   }
@@ -1057,7 +1063,9 @@ html[data-theme="dark"] .theme-doc-sidebar-container div[title="Expand sidebar"]
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.293 4.293a1 1 0 0 0 0 1.414L14.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414l-7-7a1 1 0 0 0-1.414 0Z' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 
-.theme-doc-sidebar-container :is(div[title="Expand sidebar"], button[title="Collapse sidebar"]) svg {
+.theme-doc-sidebar-container
+  :is(div[title="Expand sidebar"], button[title="Collapse sidebar"])
+  svg {
   display: none;
 }
 
@@ -1137,4 +1145,34 @@ html[data-theme="dark"] .theme-doc-sidebar-container div[title="Expand sidebar"]
 /* Hide scrollbar for Chrome, Safari and Opera */
 #discourse-comments::-webkit-scrollbar {
   display: none;
+}
+
+.sdk-sidebar-container {
+  background-color: #f0f4ff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+}
+.sdk-sidebar-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.sdk-sidebar-option input {
+  margin-right: 10px;
+}
+.sdk-sidebar-dropdown {
+  margin-left: 24px;
+  display: none;
+}
+.sdk-sidebar-description {
+  display: none;
+  margin-left: 34px;
+  color: #666;
+}
+#sdk-sidebar-plug-play:checked ~ .sdk-sidebar-plug-play-option .sdk-sidebar-dropdown {
+  display: inline-block;
+}
+#sdk-sidebar-core-kit:checked ~ .sdk-sidebar-core-kit-option .sdk-sidebar-description {
+  display: inline-block;
 }

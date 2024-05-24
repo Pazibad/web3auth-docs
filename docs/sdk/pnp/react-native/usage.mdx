@@ -1,7 +1,7 @@
 ---
 title: Using of PnP React Native SDK
 sidebar_label: Usage
-displayed_sidebar: sdk
+displayed_sidebar: sdk_pnp_react_native
 description: "Web3Auth PnP React Native SDK - Usage | Documentation - Web3Auth"
 ---
 
@@ -11,13 +11,15 @@ import ED25519Key from "@site/src/common/sdk/pnp/react-native/_get-ed25519-priv-
 import TabItem from "@theme/TabItem";
 import Tabs from "@theme/Tabs";
 
-Once you've installed and successfully initialized Web3Auth, you can use it to authenticate your users.
+Once you've installed and successfully initialized Web3Auth, you can use it to authenticate your
+users.
 
 Web3Auth returns the following functions:
 
 - `login()` - Logs in the User using the particular configuration you require for authentication.
 - `logout()` - Logs out the User.
-- `userInfo()` - After logging in, the Web3Auth instance will provide you with information regarding the user that is logged in.
+- `userInfo()` - After logging in, the Web3Auth instance will provide you with information regarding
+  the user that is logged in.
 - `privKey()` - After login, gets the private key of the user (default is `secp256k1` key).
 - `ed25519Key()` - After login, gets the `ed25519` key.
 
@@ -25,7 +27,8 @@ Web3Auth returns the following functions:
 
 ### `login()`
 
-Trigger the login flow that navigates the user to a browser model that allows them to log in with the selected login provider.
+Trigger the login flow that navigates the user to a browser model that allows them to log in with
+the selected login provider.
 
 #### Arguments
 
@@ -158,7 +161,8 @@ await web3auth.login({
 
 ### Selecting Curve
 
-The `web3auth.login()` method accepts a `curve` parameter. This parameter can be used to select the elliptic curve to use for the signature.
+The `web3auth.login()` method accepts a `curve` parameter. This parameter can be used to select the
+elliptic curve to use for the signature.
 
 ```typescript
 await web3auth.login({
@@ -213,11 +217,13 @@ await web3auth.login({
 
 :::info
 
-Trigger the logout flow. It is not advised to be used in iOS since it will trigger a system dialog that asks if users want to allow a Login operation.
+Trigger the logout flow. It is not advised to be used in iOS since it will trigger a system dialog
+that asks if users want to allow a Login operation.
 
 :::
 
-This method has no input and returns a `Promise` that resolves if the operation is successful, and rejects if the operation failed.
+This method has no input and returns a `Promise` that resolves if the operation is successful, and
+rejects if the operation failed.
 
 #### Example
 
@@ -227,7 +233,8 @@ await web3auth.logout();
 
 ## Getting the User Information
 
-To get the information of the user, extracted from the id token, you can call the `userInfo` method in the web3auth instance.
+To get the information of the user, extracted from the id token, you can call the `userInfo` method
+in the web3auth instance.
 
 ```tsx
 const userInfo = web3auth.userInfo();
